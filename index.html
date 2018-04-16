@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Home</title>
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<!-- the tab link function -->
+<div class="tab">
+  <button class="tablinks" onclick="openPage(event, 'Home')" id="default">Home</button>
+  <button class="tablinks" onclick="openPage(event, 'Projects')">Projects</button>
+  <button class="tablinks" onclick="openPage(event, 'aboutme')">About me</button>
+</div>
+
+<!-- The contents of the tabs-->
+<div id="Home" class="tabcontent">
+  <h3><u>Home</u></h3>
+  <p>Welcome to my Homepage</p>
+  <p style="font-size: 20px"> this website is created to show some projects that i have created over the past year.<br> There is also a section "about me" that is self explanatory<br>Anyway, feel free to look around the website at your own leisure.</p>
+  <p style="font-size: 10px">PS. i will be adding more stuff soon (hopefully)</p>
+  <img src="">
+</div>
+
+<div id="Projects" class="tabcontent">
+  <h3><u>Projects</u></h3>
+  <p align="left">This is what i have done so far</p>
+  <ul id="projectlist">
+  	<li>websites such as the one you are looking at (this one sort of works)</li>
+  	<li>some c++ programs (that barely works)</li>
+  	<li>some c# programs (that barely works)</li>
+    <li>some java stuff as well (that barely works)</li>
+  </ul> 
+</div>
+
+<div id="aboutme" class="tabcontent">
+  <h3><u>About me</u></h3>
+  <p id="descriptionaboutme">hello my name is Ernie! i see that you have stumbled upon this website (probably by accident)</p>
+</div>
+
+<!-- The javascript that allows the tabs to fade/open in the same webpage -->
+<script>
+document.getElementById("default").click(); 
+function openPage(evt, pageName) {
+    var i, tabcontent, tablinks;
+    tabcontent = document.getElementsByClassName("tabcontent");
+    for (i = 0; i < tabcontent.length; i++) {
+        tabcontent[i].style.display = "none";
+    }
+    tablinks = document.getElementsByClassName("tablinks");
+    for (i = 0; i < tablinks.length; i++) {
+        tablinks[i].className = tablinks[i].className.replace(" active", "");
+    }
+    document.getElementById(pageName).style.display = "block";
+    evt.currentTarget.className += " active";
+}
+</script>
+
+<footer>
+  <p>created by: Ernie saki</p>
+  <p>Contact information: <a href="mailto:Ernest.Saquilayan@academytrainee.com">
+  Ernest.Saquilayan@academytrainee.com</a>.</p>
+</footer>
+</body>
+</html>
