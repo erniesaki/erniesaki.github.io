@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <!DOCTYPE html>
 <!--
 <html>
@@ -249,4 +250,257 @@ for (i=1;i<=10;i++){
 }
 </script>
 </body>
+=======
+<!DOCTYPE html>
+<!--
+<html>
+<body>
+<script>
+var x = 0;
+var example = 5 + 5;
+var exampleString = "hello " + "world " + " !";
+window.alert(exampleString + " " + example);
+</script>
+</body>
+</html> -->
+
+<!-- first excercise(functions 1) 
+<html>
+<body>
+<script>
+var input = prompt("insert a number");
+window.alert("the square of your number is " + Math.pow(input, 2));
+</script>
+</body>
+</html> -->
+
+<!-- second excercise (functions 2)
+<html>
+<body>
+<script>
+var input1= prompt("please input a number one");
+var input2= prompt("please input a number two");
+var input3= prompt("please input a number three");
+var sum1= parseInt(input1);
+var sum2= parseInt(input2);
+var sum3= parseInt(input3);
+var sumAll= sum1+sum2+sum3;
+window.alert("the sum of the three numbers you inputted is " + sumAll);
+</script>
+</body> -->
+
+
+<!-- third excercise (Variables 2 - the easy way)
+<html>
+<body>
+<script>
+for(i = 0; i < 2; i++){
+var name= prompt("please input your name");
+var age= prompt("please input your age");
+var occupation= prompt("please input your occupation");
+window.alert("Your name is " + name + " and You are " + age + " years old" + " Your job is " + occupation);
+}
+</script>
+</body>
+</html> -->
+
+<!-- the (real solution to) third excercise (variables 2)
+<html>
+<body>
+	<button onclick="showCurrent();"> show current</button>
+	<button onclick="change();"> change database</button>
+<script>
+var person = {
+	firstName: "ernie",
+	age: "25",
+	occupation: "NEET"
+};
+
+function showCurrent (){
+document.write("Name: " + person.firstName + "<br>Age: " + person.age + "<br>Occupation: " + person.occupation);
+}
+
+function change (){
+person.firstName = prompt("what is your name");
+person.age = prompt("what is your age");
+person.occupation = prompt("what is your occupation");
+document.write("Name: " + person.firstName + "<br>Age: " + person.age + "<br>Occupation: " + person.occupation);
+}
+</script>
+</body>
+</html> -->
+
+<!-- fourth excercise (Events 1)
+<html>
+<body>
+	<button onclick="ageIncrease(); window.alert(age);"> Age increased </button>
+<script>
+var age= prompt("please input your age");
+window.alert ("you are " + age);
+function ageIncrease(){
+	age++;
+}
+</script>
+</body>
+</html> -->
+
+<!-- fourth excercise (Functions 3 / Events 2)
+<html>
+<body>
+	<p>Name: </p>
+	<textarea id="person1">Name here</textarea>
+	<p>Age: </p>
+	<textarea id="person2">Age Here</textarea>
+	<p>Occupation:</p>
+	<textarea id="person3">Occupation </textarea>
+	<br><button onclick="change();"> submit</button>
+	<p id="showChanges">
+<script>
+var person = {
+	firstName: "ernie",
+	age: "25",
+	occupation: "NEET"
+};
+function change (){
+person.firstName = document.getElementById("person1").value;
+person.age = document.getElementById("person2").value;
+person.occupation = document.getElementById("person3").value;
+document.getElementById("showChanges").innerHTML = ("Name: " + person.firstName + "<br>Age: " + person.age + "<br>Occupation: " + person.occupation);
+}
+</script>
+</body>
+</html> -->
+
+<!-- fifth excercise (Strings 1)
+<html>
+<body>
+	<button onclick="capitalise();"> C A P I T A L I S E</button>
+<script>
+var string1= "he said 'My name is Elliot'";
+window.alert(string1);
+function capitalise(){
+	var cap = string1.toUpperCase();
+	document.write(cap);
+}
+</script>
+</body>
+</html> -->
+
+<!-- sixth excercise (String 2)
+<html>
+<body>
+<script>
+	var conString = "hello ";
+	var conNum = 5;
+	var con = conString.concat(conNum);
+	document.write(con);
+</script>
+</body>
+</html> -->
+
+<!-- seventh excercise (Arrays 1 Strings 3)
+<html>
+<body>
+	<br><button onclick="show()">show all</button>
+	<br><button onclick="remove()">remove last element</button>
+	<br><button onclick="add()">add an element to the array</button>
+<script>
+	var cars = ["Toyota ","Honda ","Mazda "];
+	function show (){
+	document.write(cars);
+	}
+	function remove(){	
+	cars.pop();
+	}
+	function add (){
+	arrayPush = prompt("enter a car name");
+	cars.push(arrayPush);
+	}
+</script>
+</body>
+</html> -->
+
+<!-- eight excercise (Coditionals 1)
+<html>
+<body>
+<script>
+var person = {
+	firstName: "ernie",
+	age: "50",
+	occupation: "NEET"
+};
+if (person.age >= 20 && person.age <= 40){
+	document.write("true - the person is aged between 20-40 years old");
+} else if (person.age > 40) {
+	document.write("false - the person is aged above 40");
+}
+</script>
+</body>
+</html> -->
+
+<!-- ninth excercise (Iteration 1)
+<html>
+<body>
+	<button onclick="loop()">SHOW ME THE LOOP BABY</button>
+<script>
+function loop(){	
+for (i=1;i<=10;i++){
+	document.write (i);
+	}
+}
+</script>
+</body>
+</html> -->
+
+<!-- tenth excercise (iteration 2)
+<html>
+<body>
+	<button onclick="loop()">SHOW ME THE LOOP BABY</button>
+<script>
+	function loop(){	
+for (i=1;i<=10;i++){
+	if (i % 2 === 0){
+		document.write(i);
+		}
+   }
+}
+</script>
+</body>
+</html> -->
+
+<!-- FIZZ BUZZ (Iteration 3)
+<html>
+<body>
+	<button onclick="loop()">SHOW ME THAT FIZZ BUZZ BABY</button>
+<script>
+	function loop(){	
+	for (var i=1; i <= 100; i++){
+    if (i % 15 == 0)
+        document.write("<br> FizzBuzz");
+    else if (i % 3 == 0)
+        document.write("<br> Fizz");
+    else if (i % 5 == 0)
+        document.write("<br> Buzz");
+    else
+        document.write("<br>" + i);
+	}
+}
+</script>
+</body>
+</html> -->
+
+<html>
+<body>
+<script>
+	var number = prompt("please enter a number");
+	function loop(){	
+	for (var i =1; i <= 100; i--){
+    else if (number % 3 == 0)
+        number \= 3;
+    else if (number !% 3 == 0)
+	}
+}
+</script>
+</body>
+>>>>>>> 25846e8aee3d784fadae0893be62927cfacda53e
 </html> 
