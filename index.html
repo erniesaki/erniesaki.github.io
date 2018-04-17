@@ -5,41 +5,48 @@
 <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-<!-- the tab link function -->
+
+<!-- the tabs on top of the website-->
 <div class="tab">
   <button class="tablinks" onclick="openPage(event, 'Home')" id="default">Home</button>
   <button class="tablinks" onclick="openPage(event, 'Projects')">Projects</button>
   <button class="tablinks" onclick="openPage(event, 'aboutme')">About me</button>
 </div>
 
-<!-- The contents of the tabs-->
+<!-- The contents of the home tabs/page -->
 <div id="Home" class="tabcontent">
   <h3><u>Home</u></h3>
   <p>Welcome to my Homepage</p>
-  <p style="font-size: 20px"> this website is created to show some projects that i have created over the past year.<br> There is also a section "about me" that is self explanatory<br>Anyway, feel free to look around the website at your own leisure.</p>
+  <p style="font-size: 20px"> this website is created to show some projects that i have created over the past years.
+    <br> There is also a section "about me" that is self explanatory
+    <br>Anyway, feel free to look around the website at your own leisure.</p>
   <p style="font-size: 10px">PS. i will be adding more stuff soon (hopefully)</p>
   <img src="">
 </div>
 
+<!-- the content of the projects tab/page -->
 <div id="Projects" class="tabcontent">
   <h3><u>Projects</u></h3>
   <p align="left">This is what i have done so far</p>
   <ul id="projectlist">
-  	<li>websites such as the one you are looking at (this one sort of works)</li>
+  	<li><a href="https://github.com/erniesaki/erniesaki.github.io">websites such as the one you are looking at (this one sort of works)</a></li>
   	<li>some c++ programs (that barely works)</li>
   	<li>some c# programs (that barely works)</li>
     <li>some java stuff as well (that barely works)</li>
   </ul> 
+  <p style="font-size: 20px; text-align: left;"><a href="https://github.com/erniesaki">I also have a github account that you can browse to see what i have been up to!</a></p>
 </div>
 
+<!-- the about me tab/page -->
 <div id="aboutme" class="tabcontent">
   <h3><u>About me</u></h3>
-  <p id="descriptionaboutme">hello my name is Ernie! i see that you have stumbled upon this website (probably by accident)</p>
+  <p id="descriptionaboutme">hello my name is Ernie! i see that you have stumbled upon this website (probably by accident).
+  <br>As explained in the "home" page, this website is created to show the projects that i have done in the past 5 years or so (if i could find them anyway)</p>
 </div>
 
 <!-- The javascript that allows the tabs to fade/open in the same webpage -->
 <script>
-document.getElementById("default").click(); 
+document.getElementById("default").click(); //makes the "home" page the default page
 function openPage(evt, pageName) {
     var i, tabcontent, tablinks;
     tabcontent = document.getElementsByClassName("tabcontent");
@@ -55,6 +62,7 @@ function openPage(evt, pageName) {
 }
 </script>
 
+<!-- footer of the website that stays at the bottom -->
 <footer>
   <p>created by: Ernie saki</p>
   <p>Contact information: <a href="mailto:Ernest.Saquilayan@academytrainee.com">
