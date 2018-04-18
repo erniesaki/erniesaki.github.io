@@ -223,11 +223,11 @@ for (i=1;i<=10;i++){
 	function loop(){	
 	for (var i=1; i <= 100; i++){
     if (i % 15 == 0)
-        document.write("<br> FizzBuzz");
+        document.write("<br> FizzBuzz" + i);
     else if (i % 3 == 0)
-        document.write("<br> Fizz");
+        document.write("<br> Fizz" + i );
     else if (i % 5 == 0)
-        document.write("<br> Buzz");
+        document.write("<br> Buzz" + 1 );
     else
         document.write("<br>" + i);
 	}
@@ -236,18 +236,51 @@ for (i=1;i<=10;i++){
 </body>
 </html> -->
 
+<!-- excercise eleven (iteration 4)
 <html>
 <body>
 <script>
-	var number = prompt("please enter a number");
-	function loop(){	
-	for (var i =1; i <= 100; i---){
-    else if (number % 3 == 0)
-        number \= 3;
-    else if (number !% 3 == 0)
-
-	}
+	var int1 = prompt("input number");
+	var int2 = parseInt(int1);
+	document.write("the number you inputted is " + int2)
+	for(iteration=1; int2>1; iteration++){
+    if((int2%3) == 0){
+    	int2=int2/3;
+        document.write("<br> divided by 3 is "+ int2 + " and the number of iterations is "+ iteration);
+    }
+    else if (((int2-1)%3)==0){
+    	int2=((int2-1)/3);
+    	document.write("<br> minus 1 and divide by 3 is "+ int2 + " and the number of iterations is "+ iteration);
+    }
+    else if (((int2+1)%3)==0){
+    	int2=((int2 + 1)/3);
+    	document.write("<br> plus 1 and divided by 3 is "+ int2 + " and the number of iterations is "+ iteration);
+    }
 }
 </script>
 </body>
-</html> 
+</html> -->
+
+<html>
+<body>
+<script>
+	var int1 = prompt("input number");
+	var int2 = parseInt(int1);
+	document.write("the number you inputted is " + int2)
+	for(iteration=1; int2>1; iteration++){
+    if((int2%3) == 0){
+    	int2=int2/3;
+        document.write("<br> divided by 3 is "+ int2 + " and the number of iterations is "+ iteration);
+    }
+    else if (((int2-1)%3)==0){
+    	int2=((int2-1)/3);
+    	document.write("<br> minus 1 and divide by 3 is "+ int2 + " and the number of iterations is "+ iteration);
+    }
+    else if (((int2+1)%3)==0){
+    	int2=((int2 + 1)/3);
+    	document.write("<br> plus 1 and divided by 3 is "+ int2 + " and the number of iterations is "+ iteration);
+    }
+}
+</script>
+</body>
+</html>
