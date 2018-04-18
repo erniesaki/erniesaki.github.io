@@ -261,27 +261,41 @@ for (i=1;i<=10;i++){
 </body>
 </html> -->
 
-
+<!-- excercise twelve (string 4)
 <html>
 <body>
 <script>
-	var int1 = prompt("input number");
-	var int2 = parseInt(int1);
-	document.write("the number you inputted is " + int2)
-	for(iteration=1; int2>1; iteration++){
-    if((int2%3) == 0){
-    	int2=int2/3;
-        document.write("<br> divided by 3 is "+ int2 + " and the number of iterations is "+ iteration);
-    }
-    else if (((int2-1)%3)==0){
-    	int2=((int2-1)/3);
-    	document.write("<br> minus 1 and divide by 3 is "+ int2 + " and the number of iterations is "+ iteration);
-    }
-    else if (((int2+1)%3)==0){
-    	int2=((int2 + 1)/3);
-    	document.write("<br> plus 1 and divided by 3 is "+ int2 + " and the number of iterations is "+ iteration);
-    }
-}
+	var string2 = prompt("Enter your string here");
+	var numTriple = 0;
+	for (i=1;i<string2.length;i++){
+		if(((string2[i]) == (string2[i-1])) && ((string2[i]) == (string2[i+1]))){
+			numTriple++;
+		}
+	}
+	document.write("the amount of triple in your string is " + numTriple);
+</script>
+</body>
+</html> -->
+
+<html>
+<body>
+	<button onclick="addPara()">Add paragraph</button><br>
+	<button onclick="changePara()">Change Paragraph</button><br>
+	<button onclick="deletePara()">Delete paragraph</button><br>
+<script>
+	function addPara(){
+		var p1 = document.createTextNode("paragraph");
+		document.body.appendChild(p1);
+		var brk = document.createElement("br");
+		document.body.appendChild(brk);		
+	}
+	function changePara(){
+		document.createTextNode("textarea");
+		
+	}
+	function deletepara(){
+
+	}
 </script>
 </body>
 </html>
