@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<body>
+	<button onclick="showCurrent();"> show current</button>
+	<button onclick="change();"> change database</button>
+<script>
+var person = {
+	firstName: "ernie",
+	age: "25",
+	occupation: "NEET"
+};
+
+function showCurrent (){
+document.write("Name: " + person.firstName + "<br>Age: " + person.age + "<br>Occupation: " + person.occupation);
+}
+
+function change (){
+person.firstName = prompt("what is your name");
+person.age = prompt("what is your age");
+person.occupation = prompt("what is your occupation");
+document.write("Name: " + person.firstName + "<br>Age: " + person.age + "<br>Occupation: " + person.occupation);
+}
+</script>
+</body>
+</html>

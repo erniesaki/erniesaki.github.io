@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<body>
+	<p>Paragraph: <b id="para"></b></p>
+	<button onclick="showPara()">Show paragraph</button>
+	<button onclick="addPara()">Add paragraph</button><br>
+	<button onclick="changePara()">Change Paragraph</button><br>
+	<button onclick="deletePara()">Delete paragraph</button><br>
+<script>
+function changePara(){
+	document.getElementById('para').innerHTML = "Paragraph";
+}
+
+function changePara(){
+	var input4= document.getElementById('userInput').value;
+	document.getElementById('para').innerHTML = input4;
+}
+
+</script> -->
+
+<!--
+<script>
+	function addPara(){
+		var p1 = document.createTextNode("paragraph");
+		document.body.appendChild(p1);
+		var brk = document.createElement("br");
+		document.body.appendChild(brk);		
+	}
+	function changePara(){
+		var txtArea = document.createElement("textarea");
+		document.body.appendChild(txtArea);
+		
+	}
+	function deletepara(){
+
+	}
+</script>
+
+</body>
+</html> 

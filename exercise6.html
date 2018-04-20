@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<body>
+	<p>Name: </p>
+	<textarea id="person1">Name here</textarea>
+	<p>Age: </p>
+	<textarea id="person2">Age Here</textarea>
+	<p>Occupation:</p>
+	<textarea id="person3">Occupation </textarea><br>
+	<br><button onclick="change();"> submit</button>
+	<p id="showChanges">
+<script>
+var person = {
+	firstName: "ernie",
+	age: "25",
+	occupation: "NEET"
+};
+function change (){
+person.firstName = document.getElementById("person1").value;
+person.age = document.getElementById("person2").value;
+person.occupation = document.getElementById("person3").value;
+document.getElementById("showChanges").innerHTML = ("Name: " + person.firstName + "<br>Age: " + person.age + "<br>Occupation: " + person.occupation);
+}
+</script>
+</body>
+</html>

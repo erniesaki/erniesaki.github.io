@@ -277,11 +277,27 @@ for (i=1;i<=10;i++){
 </body>
 </html> -->
 
+<!--
 <html>
 <body>
+	<p>Paragraph: <b id="para"></b></p>
+	<button onclick="showPara()">Show paragraph</button>
 	<button onclick="addPara()">Add paragraph</button><br>
 	<button onclick="changePara()">Change Paragraph</button><br>
 	<button onclick="deletePara()">Delete paragraph</button><br>
+<script>
+function changePara(){
+	document.getElementById('para').innerHTML = "Paragraph";
+}
+
+function changePara(){
+	var input4= document.getElementById('userInput').value;
+	document.getElementById('para').innerHTML = input4;
+}
+
+</script> -->
+
+<!--
 <script>
 	function addPara(){
 		var p1 = document.createTextNode("paragraph");
@@ -290,12 +306,75 @@ for (i=1;i<=10;i++){
 		document.body.appendChild(brk);		
 	}
 	function changePara(){
-		document.createTextNode("textarea");
+		var txtArea = document.createElement("textarea");
+		document.body.appendChild(txtArea);
 		
 	}
 	function deletepara(){
 
 	}
 </script>
+
 </body>
+</html> -->
+
+<html>
+<head>
+<title>heroes</title>
+</head>
+<body>
+<header></header>
+<section></section>
+<script>
+    var header = document.querySelector('header');
+    var section = document.querySelector('section');
+    var requestURL = 'https://raw.githubusercontent.com/ewomackQA/JSONDataRepo/master/example.json';
+    var request = new XMLHttpRequest();
+    request.open('GET', requestURL);
+    request.responseType = 'json';
+    request.send();
+    request.onload = function() {
+      var superHeroes = request.response;
+      populateHeader(superHeroes);
+      showHeroes(superHeroes);
+    }
+
+    function populateHeader(jsonObj) {
+      var header1 = document.createElement('h1');
+      header1.textContent = jsonObj['squadName'];
+      header.appendChild(header1);
+      var para = document.createElement('p');
+      para.textContent = 'Hometown: ' + jsonObj['homeTown'] + ' // Formed: ' + jsonObj['formed'];
+      header.appendChild(para);
+    }
+
+    function showHeroes(jsonObj) {
+      var heroes1 = jsonObj['members'];
+      for(var i = 0; i < heroes1.length; i++) {
+        var myArticle = document.createElement('article');
+        var header2 = document.createElement('h2');
+        var para1 = document.createElement('p');
+        var para2 = document.createElement('p');
+        var para3 = document.createElement('p');
+        var myList = document.createElement('ul');
+        header2.textContent = heroes1[i].name;
+        para1.textContent = 'Secret identity: ' + heroes1[i].secretIdentity;
+        para2.textContent = 'Age: ' + heroes1[i].age;
+        para3.textContent = 'Superpowers:';
+        var superPowers = heroes1[i].powers;
+        for(var j = 0; j < superPowers.length; j++) {
+          var listItem = document.createElement('li');
+          listItem.textContent = superPowers[j];
+          myList.appendChild(listItem);
+        }
+        myArticle.appendChild(header2);
+        myArticle.appendChild(para1);
+        myArticle.appendChild(para2);
+        myArticle.appendChild(para3);
+        myArticle.appendChild(myList);
+        section.appendChild(myArticle);
+      }
+    }
+    </script>
+  </body>
 </html>
