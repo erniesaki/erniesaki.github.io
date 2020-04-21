@@ -1,0 +1,34 @@
+<html>
+<head>
+<title>The Fibonacci sequence</title>
+</head>
+<body>
+<h1 align="center">Fibonacci Sequence</h1>
+
+<p>A fibonacci sequenceis when each term is found by adding the two terms before it together;</p>
+
+<p>the rules of the sequence is x<sub>n</sub> = x<sub>(n-1)</sub> + x<sub>(n-1)</sub><br>
+where a is the initial value and r is the common ratio</p>
+
+<script type="text/javascript">
+
+var n, x, x1, x2;
+
+n = window.prompt('please enter the number of terms you wish to display in your sequence','enter a whole number here')
+
+x1 = 0
+x2 = 1
+
+document.write('{'+ x1 + ', '+ _ ', ');
+
+for (var count =1; count <= n-2; count = count + 1)
+{
+x = parseFloat(x1) + parseFloat(x2);
+document.write(x + ',');
+x1=x2
+x2=x
+};
+document.write('...}');
+</script>
+</body>
+</html>

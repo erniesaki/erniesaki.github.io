@@ -1,0 +1,19 @@
+body  {background: #c2c2c2;
+       font-family:verdana, serif;
+       font-size: x-large}
+ 
+ 
+h1, h2  {color: black}
+
+h1   {font-size: x-large;
+      text-align: left;
+      margin-top: 30px;}      
+      
+h2  {font-size: large;
+     text-align: center}
+
+p   {font-size: larger;
+     text-align: center}
+
+img.left  {float: left;
+      margin-right: 30px;}
