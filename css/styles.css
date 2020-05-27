@@ -3,6 +3,16 @@
 	src: url("../fonts/coolvetica rg.ttf");
 }
 
+@-webkit-keyframes fadeEffect {
+    from {opacity: 0;}
+    to {opacity: 1;}
+}
+
+@keyframes fadeEffect {
+    from {opacity: 0;}
+    to {opacity: 1;}
+}
+
 body{
 	font-family: Arial;
 	color: #bfbfbf;
@@ -10,21 +20,6 @@ body{
 	background-image: url("../img/background7.jpg");
 	background-size: cover;
 }
-
-/*
-.background {
-	background-repeat: no-repeat;
-	background-size: cover;
-	background-position: center;
-	position: absolute;
-	filter: blur(8px);
-	height: 100%;
-	width: 100%;
-	margin: auto;
-	-webkit-background-size: cover;
-	-moz-background-size: cover;
-	-o-background-size: cover;
-}*/
 
 h3 {
 	position: center;
@@ -182,13 +177,18 @@ a:active {
 .show {
 	display: inherit;
 	}
-*/
+	
+.background {
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center;
+	position: absolute;
+	filter: blur(8px);
+	height: 100%;
+	width: 100%;
+	margin: auto;
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
 
-@-webkit-keyframes fadeEffect {
-    from {opacity: 0;}
-    to {opacity: 1;}
-}
-@keyframes fadeEffect {
-    from {opacity: 0;}
-    to {opacity: 1;}
-}
+*/
